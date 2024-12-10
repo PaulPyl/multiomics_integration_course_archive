@@ -59,8 +59,8 @@ First we do the multiblock PLS-DA (`block.plsda`), trying to discriminate the di
 result.diablo.tcga <- block.plsda(X, Y) # run the method
 plotLoadings(result.diablo.tcga, comp = 1)
 plotLoadings(result.diablo.tcga, comp = 2)
-plotIndiv(result.diablo.tcga) # plot the samples
-plotVar(result.diablo.tcga) # plot the variables
+plotIndiv(result.diablo.tcga, legend = TRUE) # plot the samples
+plotVar(result.diablo.tcga, legend = TRUE) # plot the variables
 ```
 
 ## Multiblock sPLS-DA (sparse)
@@ -77,8 +77,8 @@ result.sparse.diablo.tcga <-  block.splsda(X, Y, keepX = list.keepX)
 # plot the contributions of each feature to each dimension
 plotLoadings(result.sparse.diablo.tcga, comp = 1)
 plotLoadings(result.sparse.diablo.tcga, comp = 2)
-plotIndiv(result.sparse.diablo.tcga) # plot the samples
-plotVar(result.sparse.diablo.tcga) # plot the variables
+plotIndiv(result.sparse.diablo.tcga, legend = TRUE) # plot the samples
+plotVar(result.sparse.diablo.tcga, legend = TRUE) # plot the variables
 ```
 
 # MOFA on the same Data
